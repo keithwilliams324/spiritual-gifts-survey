@@ -52,7 +52,7 @@ export const questions = [
       {
         category: 'Prophecy',
         questions: [
-            { text: 'I have delivered God\’s message of warning and judgment.', options: [1, 2, 3, 4, 5] },
+            { text: 'I have delivered God’s message of warning and judgment.', options: [1, 2, 3, 4, 5] },
             { text: 'I feel that I have a message from God to deliver to others.', options: [1, 2, 3, 4, 5] },
             { text: 'I have spiritual insights from Scripture concerning issues and people that compel me to speak out.', options: [1, 2, 3, 4, 5] },
             { text: 'I have delivered to other persons messages that have come directly from God.', options: [1, 2, 3, 4, 5] },

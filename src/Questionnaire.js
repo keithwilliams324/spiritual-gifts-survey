@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { questions } from "./Questions";
 import {
   Button,
-  Tooltip,
   Typography,
   Box,
   FormControl,
