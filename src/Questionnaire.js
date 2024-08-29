@@ -12,6 +12,7 @@ import {
   CardContent,
   CardHeader,
 } from "@mui/material";
+import './styles.css'; // Import the CSS file
 
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -72,9 +73,6 @@ function Questionnaire({ onComplete }) {
           ></CardHeader>
           <CardContent>
             <Box display="flex" alignItems="center" justifyContent="center">
-              <Typography variant="h8" mr={2}>
-              LEAST
-              </Typography>
               <FormControl component="fieldset">
                 <RadioGroup
                   row
@@ -95,14 +93,12 @@ function Questionnaire({ onComplete }) {
                         control={<Radio />}
                         label={option.toString()}
                         labelPlacement="top"
+                        className="formControlLabel" // Apply the CSS class
                       />
                     )
                   )}
                 </RadioGroup>
               </FormControl>
-              <Typography variant="h8" ml={1}>
-              MOST
-              </Typography>
             </Box>
           </CardContent>
         </Card>
