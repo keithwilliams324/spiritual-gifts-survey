@@ -72,8 +72,8 @@ function Questionnaire({ onComplete }) {
           ></CardHeader>
           <CardContent>
             <Box display="flex" alignItems="center" justifyContent="center">
-              <Typography variant="h7" mr={2}>
-              Least
+              <Typography variant="h8" mr={2}>
+              LEAST
               </Typography>
               <FormControl component="fieldset">
                 <RadioGroup
@@ -94,13 +94,14 @@ function Questionnaire({ onComplete }) {
                         value={option}
                         control={<Radio />}
                         label={option.toString()}
+                        labelPlacement="top"
                       />
                     )
                   )}
                 </RadioGroup>
               </FormControl>
-              <Typography variant="h7" ml={1}>
-              Most
+              <Typography variant="h8" ml={1}>
+              MOST
               </Typography>
             </Box>
           </CardContent>
