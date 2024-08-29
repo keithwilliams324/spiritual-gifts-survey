@@ -73,7 +73,7 @@ function Questionnaire({ onComplete }) {
           <CardContent>
             <Box display="flex" alignItems="center" justifyContent="center">
               <Typography variant="h7" mr={2}>
-              Least characteristic of me
+              Least
               </Typography>
               <FormControl component="fieldset">
                 <RadioGroup
@@ -100,7 +100,7 @@ function Questionnaire({ onComplete }) {
                 </RadioGroup>
               </FormControl>
               <Typography variant="h7" ml={1}>
-              Most characteristic of me
+              Most
               </Typography>
             </Box>
           </CardContent>
