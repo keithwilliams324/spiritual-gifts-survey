@@ -1,4 +1,5 @@
 import React from "react";
+import { Card, CardContent, CardHeader, Typography, Grid } from "@mui/material";
 
 function Result({ answers }) {
   const categorySums = Object.keys(answers).reduce((sums, category) => {
@@ -17,13 +18,26 @@ function Result({ answers }) {
 
   return (
     <div>
-      <h2>Your Responses</h2>
-      {sortedCategories.map(([category, sum], index) => (
-        <div key={index} style={{ fontWeight: index < 3 ? "bold" : "normal" }}>
-          <h3>{category}</h3>
-          <p>Total: {sum}</p>
-        </div>
-      ))}
+      <Typography variant="h4" gutterBottom>
+        Your Responses
+      </Typography>
+      <Grid container spacing={2}>
+        {sortedCategories.map(([category, sum], index) => (
+          <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+            <Card>
+              <CardHeader
+                title={category}
+                titleTypographyProps={{ variant: 'h5', style: { fontWeight: index < 3 ? "bold" : "normal" } }}
+              />
+              <CardContent>
+                <Typography variant="body2">
+                  Total: {sum}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 }
