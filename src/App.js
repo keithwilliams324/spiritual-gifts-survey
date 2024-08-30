@@ -23,14 +23,16 @@ function App() {
         height="100vh"
       >
         <img src={logo} alt="Logo" style={{ width: '100px', marginBottom: '20px' }} />
-        <Typography variant="h4" gutterBottom style={{textAlign: 'center'}}>
-        Spiritual Gifts Assessment
+        <Typography variant="h4" gutterBottom style={{ textAlign: 'center' }}>
+          Spiritual Gifts Assessment
         </Typography>
-        <Typography style={{ maxWidth: '600px', textAlign: 'center'}}>This is not a test, so there are no wrong answers. Please rate yourself on a scale from 1 to 5, where 1 means ‘Not at all characteristic of me’ and 5 means ‘Highly characteristic of me.'</Typography>
+        <Typography style={{ maxWidth: '600px', textAlign: 'center' }}>This is not a test, so there are no wrong answers. Please rate yourself on a scale from 1 to 5, where 1 means ‘Not at all characteristic of me’ and 5 means ‘Highly characteristic of me.'</Typography>
         {!showResult ? (
           <Questionnaire onComplete={handleAnswers} />
         ) : (
-          <Result answers={answers} />
+          <Box style={{ height: '50vh', overflow: 'auto' }}>
+            <Result answers={answers} />
+          </Box>
         )}
       </Box>
     </div>
