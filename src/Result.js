@@ -30,8 +30,8 @@ function Result({ answers }) {
                 titleTypographyProps={{ variant: 'h5', style: { fontWeight: index < 3 ? "bold" : "normal" } }}
               />
               <CardContent>
-                <Typography variant="body2">
-                  Total: {sum}
+                <Typography variant="body">
+                  {sum}
                 </Typography>
               </CardContent>
             </Card>
